@@ -1,0 +1,108 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="./loader.js"></script>
+    <script
+      type="text/javascript"
+      src="https://cdn.jsdelivr.net/npm/toastify-js"
+    ></script>
+    <script src="./toast.js"></script>
+    <link rel="stylesheet" href="./loader.css" />
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/@picocss/pico@latest/css/pico.min.css"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css"
+    />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1
+      style="
+        text-align: center;
+        font-size: 60px;
+        margin: 3vh;
+        color: chartreuse;
+        font-family: Arial, Helvetica, sans-serif;
+      "
+    >
+      HTTP
+    </h1>
+    <div style="margin: 0 auto; width: 70vw">
+      <div style="display: flex; flex-direction: column; gap: 20px">
+        <h2>Exercise 1</h2>
+        <label for="userId"> User's id </label>
+        <input
+          id="userId"
+          name="userId"
+          type="number"
+          min="0"
+          max="100"
+          placeholder="0-100 characters"
+        />
+
+        <select name="" id="collectionSelect">
+          <option value="" hidden>SELECT COLLECTIONS</option>
+          <option value="albums">albumns</option>
+          <option value="todos">todos</option>
+          <option value="posts">posts</option>
+        </select>
+
+        <button id="submit">Submit</button>
+      </div>
+
+      <div>
+        <h2>POSTS</h2>
+        <table>
+          <thead>
+            <tr>
+              <th>Post Id</th>
+              <th>Title</th>
+              <th></th>
+            </tr>
+          </thead>
+          <tbody id="postsTable"></tbody>
+        </table>
+      </div>
+      <br /><br />
+      <div>
+        <h2>Exercise 2</h2>
+        <form
+          id="createPost"
+          style="display: flex; flex-direction: column; gap: 20px"
+        >
+          <label for="title">Post title</label>
+          <input type="text" id="title" name="title" placeholder="Title..." />
+
+          <label for="content">Post content</label>
+          <textarea
+            placeholder="Content"
+            name="content"
+            id="content"
+            cols="30"
+            rows="10"
+          ></textarea>
+          <label for="userSelect">Author</label>
+          <select name="userSelect" id="userSelect">
+            <option value="" hidden>Select User</option>
+            <option value="1">Jane</option>
+            <option value="2">John</option>
+            <option value="3">John</option>
+          </select>
+          <button type="submit">Submit</button>
+        </form>
+      </div>
+    </div>
+    <div class="loader-container">
+      <div class="loader"></div>
+    </div>
+    <script src="./app.js"></script>
+    <script src="./exercise003/exercise.js"></script>
+  </body>
+</html>
