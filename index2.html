@@ -1,0 +1,102 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="./loader.js"></script>
+    <script
+      type="text/javascript"
+      src="https://cdn.jsdelivr.net/npm/toastify-js"
+    ></script>
+    <script src="./toast.js"></script>
+    <link rel="stylesheet" href="./loader.css" />
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/@picocss/pico@latest/css/pico.min.css"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css"
+    />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1
+      style="
+        text-align: center;
+        font-size: 60px;
+        margin: 3vh;
+        color: chartreuse;
+        font-family: Arial, Helvetica, sans-serif;
+      "
+    >
+      HTTP
+    </h1>
+    <div style="margin: 0 auto; width: 70vw">
+      <div>
+        <h2>Create User</h2>
+        <form
+          id="createUser"
+          style="display: flex; flex-direction: column; gap: 20px"
+        >
+          <label for="user">User name</label>
+          <input type="text" id="name" name="name" placeholder="User name..." />
+
+          <label for="age">User age</label>
+          <input type="text" id="age" name="age" placeholder="Age..." />
+          <div style="display: flex; gap: 20px">
+            <button type="submit">Submit</button>
+            <button type="reset" class="outline">Cancel</button>
+          </div>
+        </form>
+      </div>
+      <div>
+        <h2>Users</h2>
+        <table role="grid">
+          <thead>
+            <tr>
+              <th>User</th>
+              <th>Age</th>
+              <th></th>
+              <th></th>
+            </tr>
+          </thead>
+          <tbody id="usersTable"></tbody>
+        </table>
+      </div>
+    </div>
+
+    <div class="loader-container">
+      <div class="loader"></div>
+    </div>
+
+    <dialog id="modal-example">
+      <article>
+        <h3>User to edit</h3>
+        <form id="updateUser">
+          <label for="user">User Id</label>
+          <input type="text" id="id1" name="id" readonly />
+          <label for="user">User name</label>
+          <input
+            type="text"
+            id="name1"
+            name="name"
+            placeholder="User name..."
+          />
+
+          <label for="age">User age</label>
+          <input type="text" id="age1" name="age" placeholder="Age..." />
+          <div style="display: flex; gap: 20px">
+            <button type="submit">Submit</button>
+            <button type="reset" class="outline">Cancel</button>
+          </div>
+        </form>
+      </article>
+    </dialog>
+
+    <script src="./app2.js"></script>
+    <script src="./exercise005/exercise.js"></script>
+  </body>
+</html>
